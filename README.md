@@ -1,7 +1,7 @@
 ## Neo4j.Sips.Models
 
 
-Introducing Models support for the Neo4j.Sips Elixir driver.
+Minimalistic Model support for the [Neo4j.Sips](https://github.com/florinpatrascu/neo4j_sips) Elixir driver.
 
 ### Install
 
