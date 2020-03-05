@@ -7,46 +7,58 @@ Minimalistic Model support for the [Neo4j.Sips](https://github.com/florinpatrasc
 
 If available on Hex.pm, edit the `mix.ex` configuration file and add the `neo4j_sips_models` dependency to the `deps/1 `function:
 
-    defp deps do
-      [{:neo4j_sips_models, "~> 0.1"}]
-    end
+```elixir
+defp deps do
+  [{:neo4j_sips_models, "~> 0.1"}]
+end
+```
 
 or Github:
 
-    defp deps do
-      [{:neo4j_sips_models, github: "florinpatrascu/neo4j_sips_models"}]
-    end
+```elixir
+defp deps do
+  [{:neo4j_sips_models, github: "florinpatrascu/neo4j_sips_models"}]
+end
+```
 
 Or, if you're using a local development copy:
 
-    defp deps do
-      [{:neo4j_sips_models, path: "../neo4j_sips_models"}]
-    end
+```elixir
+defp deps do
+  [{:neo4j_sips_models, path: "../neo4j_sips_models"}]
+end
+```
 
 Then add the `neo4j_sips_models` dependency the applications list:
 
-    def application do
-      [applications: [:logger, :neo4j_sips_models]]
-    end
+```elixir
+def application do
+  [applications: [:logger, :neo4j_sips_models]]
+end
+```
 
 
 Edit the `config/config.exs` and describe a Neo4j server endpoint, example:
-
-    config :neo4j_sips, Neo4j,
-      url: "http://localhost:7474",
-      pool_size: 5,
-      max_overflow: 2,
-      timeout: 30
+```elixir
+config :neo4j_sips, Neo4j,
+  url: "http://localhost:7474",
+  pool_size: 5,
+  max_overflow: 2,
+  timeout: 30
+```
 
 Run `mix do deps.get, deps.compile`
 
 If your server requires basic authentication, add this to your config file:
-      
-      basic_auth: [username: "foo", password: "bar"]
+```elixir   
+basic_auth: [username: "foo", password: "bar"]
+```
       
 Or:
-      
-      token_auth: "bmVvNGo6dGVzdA==" # if using an authentication token?!
+   
+```elixir
+token_auth: "bmVvNGo6dGVzdA==" # if using an authentication token?!
+```
    
 ### Usage
 
